@@ -1,4 +1,5 @@
 import { ChangeEvent, forwardRef, KeyboardEvent } from "react";
+import './style.css';
 
 interface Props {
     title : string,
