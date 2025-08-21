@@ -1,5 +1,5 @@
 enum ResponseCode {
-    SUCESS = "SU",
+    SUCCESS = "SU",
 
     VALIDATION_FAIL = "VF",
     DUPLICATE_ID = "DI",
