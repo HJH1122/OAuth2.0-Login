@@ -220,9 +220,8 @@ export default function SignUp() {
         navigate('/auth/sign-in');
     }
 
-    const onSnsSignInButtonClickHanlder = (type: 'kakao' | 'naver')=>{
-        window.location.href = SNS_SIGN_IN_URL(type);
-    }
+
+    
 
     const onIdKeyDownHandler = (event: KeyboardEvent<HTMLInputElement>) =>{
         if(event.key !== 'Enter') return;
@@ -255,13 +254,7 @@ export default function SignUp() {
             <div className='sign-up-box'>
                 <div className='sign-up-title'>{'임대주택 가격 서비스'}</div>
                 <div className='sign-up-content-box'>
-                    <div className='sign-up-content-sns-sign-in-box'>
-                        <div className='sign-up-content-sns-sign-in-title'>{'SNS회원가입'}</div>
-                        <div className='sign-up-content-sns-sign-in-button-box'>
-                             <div className='kakao-sign-in-button' onClick={() => onSnsSignInButtonClickHanlder('kakao')}></div>
-                            <div className='naver-sign-in-button' onClick={() => onSnsSignInButtonClickHanlder('naver')}></div>
-                        </div>
-                    </div>
+                    
                     <div className='sign-up-content-divider'></div>
                     <div className='sign-up-content-input-box'>
                         <InputBox ref={idRef} title='아이디' placeholder='아이디를 입력해주세요.' type='text' value={id} onChange={onIdChangeHandler} isErrorMessage={isIdError} message={idMessage} buttonTitle='중복 확인' onButtonClick={onIdButtonClickHandler} onKeyDown={onIdKeyDownHandler}/>
